@@ -7,11 +7,12 @@
 'use strict';
 
 var apiai = require("apiai");
+const uuidV4 = require('uuid/v4');
 
 var app = apiai("YOUR_ACCESS_TOKEN");
 
 var options = {
-    sessionId: '<UNIQE SESSION ID>'
+    sessionId: uuidV4();
 };
 
 var request = app.getContextsRequest(options);
